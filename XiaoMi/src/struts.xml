@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 
+
+<package name="shop" extends="json-default" namespace="/">
+<action name="index" class="Action.Index">
+<result name="success">/index.jsp</result>
+</action>
+
+<action name="login" class="Action.Login">
+<result name="SUCCESS">/login.jsp</result>
+</action>
+<action name="register" class="Action.Register">
+<result name="SUCCESS">/Register.jsp</result>
+</action>
+<action name="registers" class="Action.UserRegister">
+<result name="SUCCESS">/index.jsp</result>
+<result name="ERROR">/err1.jsp</result>
+</action>
+<action name="pic" class="Action.Pic">
+</action>
+<action name="logins" class="Action.Logins">
+<result name="SUCCESS">/index.jsp</result>
+<result name="ERROR">/err2.jsp</result>
+</action>
+
+<action name="phones" class="Action.Select">
+<result name="success" type="json">
+ 			<param name="root">map</param>
+ 		</result>
+</action>
+<action name="phone">
+<result name="success">/first.jsp</result>
+</action>
+<action name="buy" class="Action.Buy"></action>
+<action name="car" class="Action.Car">
+<result name="success">/buy.jsp</result>
+<result name="error">/index.jsp</result>
+</action>
+<action name="out" class="Action.Out">
+<result name="success">/index.jsp</result>
+</action>
+<action name='sum' class="Action.Sum">
+<result>
+</result>
+</action>
+<action name="shopcar" class="Action.ShopCar">
+<result name="success" type="json">
+<param name="root">map</param> 
+</result>
+</action>
+<action name='cancel' class="Action.Cancel">
+</action>
+</package>
+</struts>
